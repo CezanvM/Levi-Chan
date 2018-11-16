@@ -1,0 +1,50 @@
+          - intents
+                - Greeting 
+                - Goodbye
+                - Classroom location 
+                - Classroom occupied 
+                - Gratefull
+
+- Greeting 
+    - hello
+    - hello there 
+    - good morning  
+    - good day 
+    - is anyone there 
+    - hey 
+    - hey there 
+    - 
+
+- Gratefull
+    - thank you 
+    - thanks 
+    - thank you so much 
+    - thats it thanks
+    - 
+
+- Goodbye
+    - bye 
+    - goodbye 
+    - see ya 
+    - that is it 
+    - 
+
+- Classroom location 
+    - could you tell me where . is located
+    - do you know where . is
+    - where is . 
+    - could you show me the way to . 
+    - could you tell me the way to . 
+    - 
+    
+    
+- Classroom occupied 
+    - is . free 
+    - is . currently occupied 
+    - is . available 
+    - do you know if . is free 
+    - do you know if . is currently occupied 
+    - do you know if . is available
+    - 
+
+            

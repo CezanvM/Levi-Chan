@@ -1,0 +1,55 @@
+{
+    "Data": [
+        {
+            "Tag": "greeting",
+            "Pattern": [
+                "hello",
+                "hello there",
+                "good morning",
+                "good day",
+                "is anyone there",
+                "hey",
+                "hey there"
+            ]
+        },
+        {
+            "Tag": "gratefull",
+            "Pattern": [
+                "thank you",
+                "thanks",
+                "thank you so much",
+                "that is it thanks"
+            ]
+        },
+        {
+            "Tag": "goodbye",
+            "Pattern": [
+                "bye",
+                "goodbye",
+                "see ya",
+                "that is it"
+            ]
+        },
+        {
+            "Tag": "classroom_location",
+            "Pattern": [
+                "could you tell me where . is located",
+                "do you know where . is",
+                "where is .",
+                "could you show me the way to .",
+                "could you tell me the way to ."
+            ]
+        },
+        {
+            "Tag": "classroom_occupied",
+            "Pattern": [
+                "is . free",
+                "is . currently occupied",
+                "is . available",
+                "do you know if . is free",
+                "do you know if . is currently occupied",
+                "do you know if . is available"
+            ]
+        }
+    ]
+}
