@@ -25,13 +25,18 @@
             "Tag": "goodbye",
             "Pattern": [
                 "bye",
+                "bye bye",
                 "goodbye",
                 "see ya",
-                "that is it"
+                "that is it",
+                "see you later",
+                "Take it easy",
+                "Take care",
+                "Later"
             ]
         },
         {
-            "Tag": "classroom_location",
+            "Tag": "classroomLocation",
             "Pattern": [
                 "could you tell me where . is located",
                 "do you know where . is",
@@ -41,7 +46,7 @@
             ]
         },
         {
-            "Tag": "classroom_occupied",
+            "Tag": "classroomOccupied",
             "Pattern": [
                 "is . free",
                 "is . currently occupied",
