@@ -7,6 +7,7 @@
 import json
 from keras.preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split
+import numpy as np
 
 
 class WordConverterClass:
@@ -39,6 +40,7 @@ class WordConverterClass:
 
             print(self.words)
             print(self.classes)
+
         return self.tokenizeData()
 
     def tokenizeData(self):
@@ -63,7 +65,7 @@ class WordConverterClass:
         self.reverse_word_map_classes = dict(
             map(reversed, tokenClasses.word_index.items()))
 
-        print(reverse_word_map_words)
+        #print(self.reverse_word_map_classes)
         return self.splitTrainTest()
 
     #def tokenToWords(list_of_indices):
@@ -71,14 +73,19 @@ class WordConverterClass:
     #    return(words)
 
     def convertSentenceToTokens(self, sentence):
-        encodedSentence = self.tokenWords.texts_to_sequences(sentence)
-        return encodedSentence
+        sentence = sentence.lower()
+        words = sentence.split()
+        sentenceBag = np.zeros(len(self.tokenWords.word_index) + 1)
+        for s in words:
+            for i, w in enumerate(self.tokenWords.word_index):
+                if w == s:
+                    sentenceBag.itemset(self.tokenWords.word_index.get(w), 1)
 
-    def tokenToClasses(list_of_indices):
-        intention = [
-            self.reverse_word_map_classes.get(letter)
-            for letter in list_of_indices
-        ]
+    # matrix = np.matrix(np.array(sentenceBag))
+        return sentenceBag
+
+    def tokenToClasses(self, ClassificationIndex):
+        intention = self.reverse_word_map_classes[ClassificationIndex]
         return (intention)
 
     def splitTrainTest(self):
