@@ -1,0 +1,37 @@
+
+A Python module is a file with the .py extension. it can contain class, functions, variables, etc. When a python module is compiled the entire file is executed once, to check if it is valid. Every python module can be run separately.
+
+Importing a python module
+if a python module is an entry point some code can be added to be run if that is the case.
+
+def greeting(name):
+  print("Hello, " + name)
+
+if _name_ == _main_:
+   greeting("EmbeddedProject")
+so if the module is an entry point and not reference by another module, the code below the if-statement will be executed first.
+
+Modules can be imported by using
+
+import mymodule
+this means that every function or class in a module is imported. you can also import certain function or classes with the following statement
+
+from mymodule import greeting
+What is a python package?
+A Python package is a folder with python modules, which mostly contains a init.py. This file is run before any other module in the package. init.py is mostly used to initialize the package and run some code before any module is used.
+
+importing a package
+packages can also be imported with an import statement
+
+import mypackage
+the code above imports every module in the entire package, when a package is imported the init.py file is executed first. one single module can also be imported by a module, by using the following code
+
+from mypackage import mymodule
+Managing packages
+Python packages from external individuals can also be imported and used in our project by following these steps:
+
+Step 1 Find the package on https://pypi.org/ or https://anaconda.org/anaconda/repo and check if the package works with the environment version of python.
+Step 2 If the package is found on pypi, then use pip install in terminal.
+Step 3 If the package is found on anaconda, then use conda install -c in terminal.
+Step 4 Validate the installation by using the command "Conda list" and check if the package is listed.
+Step 5 Always export the current environment to embeddedproject.yml after installing a package with the "conda env export > embeddedproject.yml" command.
