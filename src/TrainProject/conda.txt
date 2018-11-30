@@ -34,4 +34,4 @@ Step 1 Find the package on https://pypi.org/ or https://anaconda.org/anaconda/re
 Step 2 If the package is found on pypi, then use pip install in terminal.
 Step 3 If the package is found on anaconda, then use conda install -c in terminal.
 Step 4 Validate the installation by using the command "Conda list" and check if the package is listed.
-Step 5 Always export the current environment to embeddedproject.yml after installing a package with the "conda env export > embeddedproject.yml" command.
+Step 5 Always export the current environment to environment.yml after installing a package with the "conda env export > environment.yml" command.

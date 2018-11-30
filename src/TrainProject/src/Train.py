@@ -4,6 +4,7 @@ from keras.optimizers import Adam, SGD
 from sklearn.metrics import accuracy_score
 import numpy as np
 import operator
+from keras.models import model_from_json
 
 
 class TrainClass:
@@ -24,8 +25,7 @@ class TrainClass:
             SGD(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
 
         print("training started!")
-        self.model.fit(
-            train_x, train_y, epochs=5000, validation_split=0.2, verbose=0)
+        self.model.fit(train_x, train_y, epochs=5000, verbose=0)
 
         print("training done!")
 
@@ -33,6 +33,32 @@ class TrainClass:
         matrix = np.array([np.asarray(input)])
         output = self.model.predict(matrix)
         return self.getClass(output, wordConverter, input)
+
+    def getModel(self):
+        return self.model
+
+    def saveModel(self, path):
+        model_json = self.model.to_json()
+        with open(path, "w") as json_file:
+            json_file.write(model_json)
+
+    def saveWeights(self, path):
+        self.model.save_weights(path)
+
+    def loadModel(self, JSON, weights):
+        json_file = open(JSON, 'r')
+        loaded_model_json = json_file.read()
+        json_file.close()
+        loaded_model = model_from_json(loaded_model_json)
+        #   load weights into new model
+        loaded_model.load_weights(weights)
+        print("Loaded model from disk")
+
+        self.model = loaded_model
+        # evaluate loaded model on test data
+        self.model.compile(
+            SGD(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
+        print("model compiled")
 
     def getClass(self, networkOutput, wordConverter, input):
         # for i in networkOutput.
