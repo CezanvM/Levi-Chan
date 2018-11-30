@@ -51,4 +51,6 @@ dependencies:
     - tensorflow==1.1.0
     - theano==1.0.3
     - werkzeug==0.14.1
+    - SpeechRecognition==3.8.1
+    - playsound==1.2.2
 
