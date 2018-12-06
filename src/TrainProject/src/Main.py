@@ -63,11 +63,9 @@ class MainClass:
 
         dateTimeNow = datetime.datetime.now()
 
-        # path = path + "{}\\".format(dateTimeNow.strftime("%Y-%m-%dT%H;%M;%S"))
-        # os.makedirs(path)
-
-        # id = binascii.b2a_hex(os.urandom(15)).decode("utf-8")
         id = dateTimeNow.strftime("%Y-%m-%d T %H;%M;%S")
+
+        
         modelJsonPath = path + id + ".modelJSON"
         weightsFilePath = path + id + ".weights"
         wordTokenizerPath = path + id + ".wordTokenizer"
@@ -89,10 +87,10 @@ class MainClass:
 
 main = MainClass()
 
-main.loadStartup("Saves\\2018-12-04 T 10;02;32.wordTokenizer",
-                 "Saves\\2018-12-04 T 10;02;32.classTokenizer",
-                 "Saves\\2018-12-04 T 10;02;32.weights",
-                 "Saves\\2018-12-04 T 10;02;32.modelJSON")
+main.loadStartup("TrainProject\\Saves\\2018-12-04 T 10;02;32.wordTokenizer",
+                 "TrainProject\\Saves\\2018-12-04 T 10;02;32.classTokenizer",
+                 "TrainProject\\Saves\\2018-12-04 T 10;02;32.weights",
+                 "TrainProject\\Saves\\2018-12-04 T 10;02;32.modelJSON")
 
 # main.startup()
 # main.saveNetwork("Saves\\")
