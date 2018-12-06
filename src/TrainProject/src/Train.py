@@ -22,10 +22,10 @@ class TrainClass:
                 input_shape=(len(train_x[0]), ),
                 activation='sigmoid'))
         self.model.compile(
-            SGD(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
+            Adam(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
 
         print("training started!")
-        self.model.fit(train_x, train_y, epochs=5000, verbose=0)
+        self.model.fit(train_x, train_y, epochs=5000, verbose=1)
 
         print("training done!")
 
@@ -57,7 +57,7 @@ class TrainClass:
         self.model = loaded_model
         # evaluate loaded model on test data
         self.model.compile(
-            SGD(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
+            Adam(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
         print("model compiled")
 
     def getClass(self, networkOutput, wordConverter, input):

@@ -91,6 +91,7 @@ class WordConverterClass:
 
         return sentenceBag
 
+
     def tokenToClasses(self, ClassificationIndex):
         intention = self.reverse_word_map_classes[ClassificationIndex]
         return (intention)

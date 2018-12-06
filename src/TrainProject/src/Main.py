@@ -46,6 +46,7 @@ class MainClass:
         self.getclass("Could you tell me where LA402 is?")
         self.getclass("Is LD402 currently free?")
         self.getclass("I would like you to tell me where la402 is")
+        self.getclass("Do you know where la1234 is?")
 
     def getclass(self, sentence):
 
@@ -88,10 +89,10 @@ class MainClass:
 
 main = MainClass()
 
-main.loadStartup("Saves\\2018-11-30 T 14;14;28.wordTokenizer",
-                 "Saves\\2018-11-30 T 14;14;28.classTokenizer",
-                 "Saves\\2018-11-30 T 14;14;28.weights",
-                 "Saves\\2018-11-30 T 14;14;28.modelJSON")
+main.loadStartup("Saves\\2018-12-04 T 10;02;32.wordTokenizer",
+                 "Saves\\2018-12-04 T 10;02;32.classTokenizer",
+                 "Saves\\2018-12-04 T 10;02;32.weights",
+                 "Saves\\2018-12-04 T 10;02;32.modelJSON")
 
-#main.startup()
-#main.saveNetwork("Saves\\")
+# main.startup()
+# main.saveNetwork("Saves\\")
