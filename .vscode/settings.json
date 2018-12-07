@@ -1,5 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\cezan\\AppData\\Local\\conda\\conda\\envs\\TrainProject\\python.exe",
-    "python.formatting.provider": "yapf",
-    "python.linting.pylintEnabled": false
+    "python.pythonPath": "C:\\Users\\larsv\\Anaconda3\\envs\\MainProject\\python.exe",
+    "python.formatting.provider": "yapf"
 }
