@@ -6,10 +6,10 @@ class QuestionInterpreterClass:
     wordConverter = WordConverterClass()
     neuralNetClass = NeuralNetClass()
 
-    wordTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\473909.wordTokenizer"
-    classTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\473909.classTokenizer"
-    modelJsonPath = "MainProject\\Data\\NeuralNetSaves\\473909.modelJSON"
-    weightsPath = "MainProject\\Data\\NeuralNetSaves\\473909.weights"
+    wordTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\558613.wordTokenizer"
+    classTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\558613.classTokenizer"
+    modelJsonPath = "MainProject\\Data\\NeuralNetSaves\\558613.modelJSON"
+    weightsPath = "MainProject\\Data\\NeuralNetSaves\\558613.weights"
 
     def InterpreterStartup(self):
         print("starting Interpreter....")

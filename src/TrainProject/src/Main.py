@@ -1,9 +1,11 @@
 from WordConverter import WordConverterClass
 from Train import TrainClass
-import pickle
+
 import os, binascii
 import gc
 import datetime
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 class MainClass:
@@ -90,10 +92,10 @@ class MainClass:
 
 main = MainClass()
 
-main.loadStartup("TrainProject\\Saves\\473909.wordTokenizer",
-                 "TrainProject\\Saves\\473909.classTokenizer",
-                 "TrainProject\\Saves\\473909.weights",
-                 "TrainProject\\Saves\\473909.modelJSON")
+# main.loadStartup("TrainProject\\Saves\\473909.wordTokenizer",
+#                  "TrainProject\\Saves\\473909.classTokenizer",
+#                  "TrainProject\\Saves\\473909.weights",
+#                  "TrainProject\\Saves\\473909.modelJSON")
 
-#main.startup()
-#main.saveNetwork("TrainProject\\Saves\\")
+main.startup()
+main.saveNetwork("TrainProject\\Saves\\")
