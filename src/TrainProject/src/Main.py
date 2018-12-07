@@ -1,9 +1,11 @@
 from WordConverter import WordConverterClass
 from Train import TrainClass
-import pickle
+
 import os, binascii
 import gc
 import datetime
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 class MainClass:
@@ -20,7 +22,7 @@ class MainClass:
         print("train project started")
         self.wordConverter = WordConverterClass()
         self.train_x, self.test_x, self.train_y, self.test_y = self.wordConverter.creatTokenizers(
-            'Data\Data.json')
+            'TrainProject\Data\Data.json')
 
         self.trainModel()
 
@@ -63,11 +65,9 @@ class MainClass:
 
         dateTimeNow = datetime.datetime.now()
 
-        # path = path + "{}\\".format(dateTimeNow.strftime("%Y-%m-%dT%H;%M;%S"))
-        # os.makedirs(path)
+        #id = dateTimeNow.strftime("%Y-%m-%d T %H;%M;%S")
+        id = str(int(self.ticks(dateTimeNow)))
 
-        # id = binascii.b2a_hex(os.urandom(15)).decode("utf-8")
-        id = dateTimeNow.strftime("%Y-%m-%d T %H;%M;%S")
         modelJsonPath = path + id + ".modelJSON"
         weightsFilePath = path + id + ".weights"
         wordTokenizerPath = path + id + ".wordTokenizer"
@@ -83,16 +83,19 @@ class MainClass:
         gc.collect()
         print("model saved")
 
+    def ticks(self, dt):
+        return (dt - datetime.datetime(2018, 12, 1)).total_seconds()
+
     def loadNetwork(self, id):
         print("loading network")
 
 
 main = MainClass()
 
-main.loadStartup("Saves\\2018-12-04 T 10;02;32.wordTokenizer",
-                 "Saves\\2018-12-04 T 10;02;32.classTokenizer",
-                 "Saves\\2018-12-04 T 10;02;32.weights",
-                 "Saves\\2018-12-04 T 10;02;32.modelJSON")
+# main.loadStartup("TrainProject\\Saves\\473909.wordTokenizer",
+#                  "TrainProject\\Saves\\473909.classTokenizer",
+#                  "TrainProject\\Saves\\473909.weights",
+#                  "TrainProject\\Saves\\473909.modelJSON")
 
-# main.startup()
-# main.saveNetwork("Saves\\")
+main.startup()
+main.saveNetwork("TrainProject\\Saves\\")
