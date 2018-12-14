@@ -1,4 +1,6 @@
 from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
+import SpeechRec
+import SpeechSynth
 import sys
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -18,8 +20,10 @@ class MainClass:
               |_______)_______) \___/ |_|             \______)_|   |_|_|   |_|_|   |_| \n\n"""
               )
         #self.getWokringDirectory()
-        self.startupNeuralNetwork()
-
+        SpeechSynth.SpeechSynthStartup()
+        #SpeechRec.SpeechStartup()
+        #self.startupNeuralNetwork()
+'''  
     def startupNeuralNetwork(self):
         questionsInterpreterClass = QuestionInterpreterClass()
         questionsInterpreterClass.InterpreterStartup()

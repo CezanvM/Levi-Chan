@@ -1,10 +1,12 @@
-import QuestionInterpreter
+from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
 
 import speech_recognition as sr
 import pandas as pd
 import datetime
 import json
 from playsound import playsound
+
+questionsInterpreterClass = QuestionInterpreterClass()
 
 APIKey = "HOFLYUVHDMKRL6ZWGYM6UZ6I5B65A6P5"
 waitingOnAPI = False
@@ -37,5 +39,6 @@ def sendAudioToAPI(sound):
 
 
 def APICallback(sentence):
-	QuestionInterpreter.InterpretQuestion(sentence)
+	print(sentence)
+	#questionsInterpreterClass.InterpretQuestion(sentence)
 	waitingOnAPI = False
