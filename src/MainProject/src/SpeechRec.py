@@ -1,41 +1,46 @@
-import QuestionInterpreter
-
+from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
 import speech_recognition as sr
 import pandas as pd
 import datetime
 import json
 from playsound import playsound
 
-APIKey = "HOFLYUVHDMKRL6ZWGYM6UZ6I5B65A6P5"
-waitingOnAPI = False
 
-r = sr.Recognizer()
-mic = sr.Microphone()
+class SpeechRecClass:
 
-def recLoop():
-	print("Listening")
-	#microphone listining
-	with mic as source:
-		r.adjust_for_ambient_noise(source, duration=0.5)
-		audio = r.listen(source)
+    APIKey = "HOFLYUVHDMKRL6ZWGYM6UZ6I5B65A6P5"
+    waitingOnAPI = False
 
-	print("Done listening")
+    r = sr.Recognizer()
+    mic = sr.Microphone()
 
-	if waitingOnAPI == False:
-		sendAudioToAPI(audio)
-		
-def SpeechStartup():
-	recLoop()
-	
-def sendAudioToAPI(sound):
-	waitingOnAPI = True
-	#sending audio to API
-	# TODO Check if working with bad english
-	sentence =  r.recognize_wit(sound, APIKey)
-	#sentence =  r.recognize_google(sound) #used for basic audio testing, conversion testing done with WIT.ai
-	APICallback(sentence)
+    questionInterpreter = QuestionInterpreterClass()
 
+    def recLoop(self):
+        while True:
+            print("Listening")
+            #microphone listining
+            with self.mic as source:
+                self.r.adjust_for_ambient_noise(source, duration=0.5)
+                audio = self.r.listen(source, 7)
+                
 
-def APICallback(sentence):
-	QuestionInterpreter.InterpretQuestion(sentence)
-	waitingOnAPI = False
+            print("Done listening")
+
+            if self.waitingOnAPI == False:
+                self.sendAudioToAPI(audio)
+
+    def SpeechStartup(self):
+        self.recLoop()
+
+    def sendAudioToAPI(self, sound):
+        self.waitingOnAPI = True
+        #sending audio to API
+        # TODO Check if working with bad english
+        sentence = self.r.recognize_wit(sound, self.APIKey)
+        #sentence =  r.recognize_google(sound) #used for basic audio testing, conversion testing done with WIT.ai
+        self.APICallback(sentence)
+
+    def APICallback(self, sentence):
+        self.questionInterpreter.InterpretQuestion(sentence)
+        self.waitingOnAPI = False

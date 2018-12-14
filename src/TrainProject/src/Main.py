@@ -1,3 +1,4 @@
+#author: Cézan von Meijenfeldt
 from WordConverter import WordConverterClass
 from Train import TrainClass
 

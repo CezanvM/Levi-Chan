@@ -1,3 +1,4 @@
+#author: Cézan von Meijenfeldt
 from InterpreterModule.WordConverter import WordConverterClass
 from InterpreterModule.NeuralNet import NeuralNetClass
 
@@ -19,13 +20,15 @@ class QuestionInterpreterClass:
         self.neuralNetClass.loadModel(self.modelJsonPath, self.weightsPath)
 
     def InterpretQuestion(self, sentence):
+        print("interpreting sentence")
         intention, certenty = self.neuralNetClass.predictModel(
             self.wordConverter.convertSentenceToTokens(sentence),
             self.wordConverter)
         print("----------------------------------------------")
         print("Sentence is: {}".format(sentence))
         print("Intention: {}".format(intention))
-        print("Certenty: {0:.2f}%".format(certenty * 100))
+        print("Certenty: {0:.2f}%".format(certenty * 100)
         print("----------------------------------------------")
 
-    
+
+        # to awnser formulator
