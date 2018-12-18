@@ -1,3 +1,4 @@
+#author: Lars van Dijk
 from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
 import speech_recognition as sr
 import pandas as pd
