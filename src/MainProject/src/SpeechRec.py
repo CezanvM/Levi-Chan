@@ -20,11 +20,15 @@ class SpeechRecClass:
     def recLoop(self):
         while True:
             print("Listening")
+            self.r = sr.Recognizer()
+            self.mic = sr.Microphone()
             #microphone listining
             with self.mic as source:
+                print("voor")
                 self.r.adjust_for_ambient_noise(source, duration=0.5)
-                audio = self.r.listen(source, 7)
-                
+                print("achter")
+                audio = self.r.listen(source, 2, phrase_time_limit=3)
+                print("eind")
 
             print("Done listening")
 
@@ -44,4 +48,5 @@ class SpeechRecClass:
 
     def APICallback(self, sentence):
         self.questionInterpreter.InterpretQuestion(sentence)
+        print(sentence)
         self.waitingOnAPI = False

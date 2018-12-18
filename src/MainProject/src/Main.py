@@ -23,7 +23,7 @@ class MainClass:
         #self.getWokringDirectory()
         self.startupNeuralNetwork()
 
-        #self.startupSpeechRec()
+        self.startupSpeechRec()
 
     def startupSpeechRec(self):
         speechClass = SpeechRecClass()
@@ -33,11 +33,11 @@ class MainClass:
         questionsInterpreterClass = QuestionInterpreterClass()
         questionsInterpreterClass.InterpreterStartup()
 
-        questionsInterpreterClass.InterpretQuestion("Hello there")
-        questionsInterpreterClass.InterpretQuestion(
-            "could you tell me where room la430 is located")
-        questionsInterpreterClass.InterpretQuestion(
-            "I am looking for the toilet")
+        # questionsInterpreterClass.InterpretQuestion("Hello there")
+        # questionsInterpreterClass.InterpretQuestion(
+        #     "could you tell me where room la430 is located")
+        # questionsInterpreterClass.InterpretQuestion(
+        #     "I am looking for the toilet")
 
     def getWokringDirectory(self):
         pathList = os.path.split(sys.argv[0])

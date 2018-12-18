@@ -21,6 +21,6 @@ class SpeechSynthCLass:
         pygame.mixer.music.play()
 
         while pygame.mixer.music.get_busy():
-            time.sleep(0.1)
+            time.sleep(0.5)
 
         sf.close()
