@@ -44,7 +44,7 @@ class MainClass:
         #if test is completed and is above a threshold save the weights and tokenizers
 
     def testModel(self):
-        self.getclass("Hello there ")
+        self.getclass("Hello there Levi Chan ")
         self.getclass("Thanks, see you later")
         self.getclass("Could you tell me where LA402 is?")
         self.getclass("Is LD402 currently free?")
