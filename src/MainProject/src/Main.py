@@ -46,6 +46,7 @@ class MainClass:
 
 #SpeechRec.SpeechStartup()
 #SpeechSynth.SpeechSynthStartup()
+''' 
 
 main = MainClass()
 main.startup()
