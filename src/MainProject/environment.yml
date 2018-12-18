@@ -46,10 +46,13 @@ dependencies:
   - zlib=1.2.11=h8395fce_2
   - pip:
     - keras==2.0.4
+    - playsound==1.2.2
     - protobuf==3.6.1
+    - pyaudio==0.2.11
     - pyyaml==3.13
+    - speechrecognition==3.8.1
     - tensorflow==1.1.0
     - theano==1.0.3
     - werkzeug==0.14.1
-    - SpeechRecognition==3.8.1
-    - playsound==1.2.2
+prefix: C:\Users\cezan\AppData\Local\conda\conda\envs\MainProject
+

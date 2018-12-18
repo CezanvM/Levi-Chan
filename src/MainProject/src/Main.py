@@ -1,6 +1,7 @@
+#author: Cézan von Meijenfeldt
+
 from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
-import SpeechRec
-import SpeechSynth
+from SpeechRec import SpeechRecClass
 import sys
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -20,10 +21,14 @@ class MainClass:
               |_______)_______) \___/ |_|             \______)_|   |_|_|   |_|_|   |_| \n\n"""
               )
         #self.getWokringDirectory()
-        SpeechSynth.SpeechSynthStartup()
-        #SpeechRec.SpeechStartup()
-        #self.startupNeuralNetwork()
-'''  
+        self.startupNeuralNetwork()
+
+        #self.startupSpeechRec()
+
+    def startupSpeechRec(self):
+        speechClass = SpeechRecClass()
+        speechClass.recLoop()
+
     def startupNeuralNetwork(self):
         questionsInterpreterClass = QuestionInterpreterClass()
         questionsInterpreterClass.InterpreterStartup()
@@ -31,7 +36,8 @@ class MainClass:
         questionsInterpreterClass.InterpretQuestion("Hello there")
         questionsInterpreterClass.InterpretQuestion(
             "could you tell me where room la430 is located")
-        questionsInterpreterClass.InterpretQuestion("How are you doing today")
+        questionsInterpreterClass.InterpretQuestion(
+            "I am looking for the toilet")
 
     def getWokringDirectory(self):
         pathList = os.path.split(sys.argv[0])

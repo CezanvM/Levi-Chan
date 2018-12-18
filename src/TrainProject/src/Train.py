@@ -1,3 +1,4 @@
+#author: Cézan von Meijenfeldt
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 from keras.optimizers import Adam, SGD
@@ -25,7 +26,7 @@ class TrainClass:
             Adam(lr=0.5), 'binary_crossentropy', metrics=['accuracy'])
 
         print("training started!")
-        self.model.fit(train_x, train_y, epochs=5000, verbose=1)
+        self.model.fit(train_x, train_y, epochs=1000, verbose=1)
 
         print("training done!")
 

@@ -1,3 +1,5 @@
+#author: Cézan von Meijenfeldt
+
 # import sentences
 # import clasification(intents)
 
@@ -70,8 +72,8 @@ class WordConverterClass:
         self.encodedClasses = self.tokenClasses.texts_to_matrix(
             self.classes, mode='count')
 
-        #print(self.encodedWords)
-        #print(self.encodedClasses)
+        print(self.encodedWords)
+        print(self.encodedClasses)
 
         reverse_word_map_words = dict(
             map(reversed, self.tokenWords.word_index.items()))
@@ -90,7 +92,6 @@ class WordConverterClass:
                     sentenceBag.itemset(self.tokenWords.word_index.get(w), 1)
 
         return sentenceBag
-
 
     def tokenToClasses(self, ClassificationIndex):
         intention = self.reverse_word_map_classes[ClassificationIndex]

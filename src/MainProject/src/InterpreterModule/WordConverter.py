@@ -1,3 +1,4 @@
+#author: Cézan von Meijenfeldt
 #!/usr/bin/env python
 
 from keras.preprocessing.text import Tokenizer
