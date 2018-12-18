@@ -3,6 +3,7 @@ from InterpreterModule.WordConverter import WordConverterClass
 from InterpreterModule.NeuralNet import NeuralNetClass
 from InterpreterModule.ConversationHandler import ConversationHandlerClass
 from formulatingModule.createAnwser import CreateAnwserClass
+from SpeechSynth import SpeechSynthCLass
 
 
 class QuestionInterpreterClass:
@@ -10,6 +11,8 @@ class QuestionInterpreterClass:
     neuralNetClass = NeuralNetClass()
     conversationHandlerClass = ConversationHandlerClass()
     createAnwserClass = CreateAnwserClass()
+    speechSyntchClass = SpeechSynthCLass()
+
     wordTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\558613.wordTokenizer"
     classTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\558613.classTokenizer"
     modelJsonPath = "MainProject\\Data\\NeuralNetSaves\\558613.modelJSON"
@@ -40,6 +43,7 @@ class QuestionInterpreterClass:
         awnser = self.createAnwserClass.createAnwser(sentence, intention,
                                                      certenty)
         print("Response is: {}".format(awnser))
+        self.speechSyntchClass.SpeakSentence(awnser)
         print("----------------------------------------------")
         print("----------------------------------------------\n\n\n")
         # to awnser formulator

@@ -44,9 +44,5 @@ class MainClass:
         print(pathList)
 
 
-#SpeechRec.SpeechStartup()
-#SpeechSynth.SpeechSynthStartup()
-''' 
-
 main = MainClass()
 main.startup()
