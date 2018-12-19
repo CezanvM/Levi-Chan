@@ -1,5 +1,5 @@
+#author: Lars van Dijk & Cézan von Meijenfeldt
 from gtts import gTTS
-import os
 import pygame
 from tempfile import TemporaryFile
 import time

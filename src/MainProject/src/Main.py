@@ -20,7 +20,6 @@ class MainClass:
               | |_____| |_____ \ \ / /| |            | |_____| |   | | |   | | |   | |
               |_______)_______) \___/ |_|             \______)_|   |_|_|   |_|_|   |_| \n\n"""
               )
-        #self.getWokringDirectory()
         self.startupNeuralNetwork()
 
         self.startupSpeechRec()

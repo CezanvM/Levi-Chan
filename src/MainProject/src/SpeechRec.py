@@ -17,21 +17,25 @@ class SpeechRecClass:
 
     def recLoop(self):
         while True:
-            print("Listening")
+
             self.r = sr.Recognizer()
             self.mic = sr.Microphone()
             #microphone listining
+            isNotTimeout = False
             with self.mic as source:
-                print("voor")
-                self.r.adjust_for_ambient_noise(source, duration=0.5)
-                print("achter")
-                audio = self.r.listen(source, 2, phrase_time_limit=3)
-                print("eind")
+                try:
+                    self.r.adjust_for_ambient_noise(source, duration=0.5)
+                    print("Listening")
+                    audio = self.r.listen(source, 4, phrase_time_limit=4)
+                    isNotTimeout = True
+                except:
+                    isNotTimeout = False
+                    print("Timeout happend")
 
             print("Done listening")
-
-            if self.waitingOnAPI == False:
-                self.sendAudioToAPI(audio)
+            if isNotTimeout:
+                if self.waitingOnAPI == False:
+                    self.sendAudioToAPI(audio)
 
     def SpeechStartup(self):
         self.recLoop()
