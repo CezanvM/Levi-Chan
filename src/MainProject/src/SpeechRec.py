@@ -2,8 +2,6 @@
 from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
 import speech_recognition as sr
 import pandas as pd
-import datetime
-import json
 from playsound import playsound
 
 

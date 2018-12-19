@@ -1,5 +1,4 @@
 from gtts import gTTS
-from playsound import playsound
 import os
 import pygame
 from tempfile import TemporaryFile
