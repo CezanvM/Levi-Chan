@@ -20,6 +20,10 @@ class MainClass:
               | |_____| |_____ \ \ / /| |            | |_____| |   | | |   | | |   | |
               |_______)_______) \___/ |_|             \______)_|   |_|_|   |_|_|   |_| \n\n"""
               )
+<<<<<<< Updated upstream
+=======
+        self.getWokringDirectory()
+>>>>>>> Stashed changes
         self.startupNeuralNetwork()
 
         self.startupSpeechRec()
@@ -32,11 +36,19 @@ class MainClass:
         questionsInterpreterClass = QuestionInterpreterClass()
         questionsInterpreterClass.InterpreterStartup()
 
+<<<<<<< Updated upstream
         # questionsInterpreterClass.InterpretQuestion("Hello there")
         # questionsInterpreterClass.InterpretQuestion(
         #     "could you tell me where room la430 is located")
         # questionsInterpreterClass.InterpretQuestion(
         #     "I am looking for the toilet")
+=======
+        #questionsInterpreterClass.InterpretQuestion("Hello there")
+        #questionsInterpreterClass.InterpretQuestion(
+        #    "could you tell me where room la430 is located")
+        #questionsInterpreterClass.InterpretQuestion(
+        #    "I am looking for the toilet")
+>>>>>>> Stashed changes
 
     def getWokringDirectory(self):
         pathList = os.path.split(sys.argv[0])
