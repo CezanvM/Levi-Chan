@@ -9,7 +9,6 @@ from SpeechSynth import SpeechSynthCLass
 class QuestionInterpreterClass:
     wordConverter = WordConverterClass()
     neuralNetClass = NeuralNetClass()
-    conversationHandlerClass = ConversationHandlerClass()
     createAnwserClass = CreateAnwserClass()
     speechSyntchClass = SpeechSynthCLass()
 
@@ -24,11 +23,12 @@ class QuestionInterpreterClass:
         self.wordConverter.loadTokenizers(self.wordTokenizerPath,
                                           self.classTokenizerPath)
         self.neuralNetClass.loadModel(self.modelJsonPath, self.weightsPath)
-        self.conversationHandlerClass.conversationHandlerInit()
+
+        ConversationHandlerClass.conversationHandlerInit()
 
     def InterpretQuestion(self, sentence):
         print("interpreting sentence")
-        self.conversationHandlerClass.conversationInput()
+        ConversationHandlerClass.conversationInput()
 
         intention, certenty = self.neuralNetClass.predictModel(
             self.wordConverter.convertSentenceToTokens(sentence),

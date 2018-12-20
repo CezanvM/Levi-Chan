@@ -7,36 +7,46 @@ class ConversationHandlerClass:
     inConversation = False
     timerRestarted = False
 
-    classroomInConversation = ""
+    classroomInConversation = "kek"
 
-    def conversationHandlerInit(self):
-        self.timerCallback()
-        self.inConversation = False
+    @staticmethod
+    def conversationHandlerInit():
+        ConversationHandlerClass.timerCallback()
+        ConversationHandlerClass.inConversation = False
 
-    def timerCallback(self):
-        if self.timerRestarted == False:
-            if self.inConversation == True:
-                self.endConversation()
+    @staticmethod
+    def timerCallback():
+        if ConversationHandlerClass.timerRestarted == False:
+            if ConversationHandlerClass.inConversation == True:
+                ConversationHandlerClass.endConversation()
                 #end conversation
         else:
-            self.timerRestarted = False
+            ConversationHandlerClass.timerRestarted = False
 
         global t
-        t = threading.Timer(15, self.timerCallback)
+        t = threading.Timer(20, ConversationHandlerClass.timerCallback)
         t.start()
 
-    def setClassroom(self, classroom):
-        self.classroomInConversation = classroom
+    @staticmethod
+    def setClassroom(classroom):
+        ConversationHandlerClass.classroomInConversation = classroom
 
-    def conversationInput(self):
-        if self.inConversation == False:
+    @staticmethod
+    def getClassroom():
+        return ConversationHandlerClass.classroomInConversation
+
+    @staticmethod
+    def conversationInput():
+        if ConversationHandlerClass.inConversation == False:
             print("Conversation started")
         t.cancel()
-        self.timerRestarted = True
-        self.timerCallback()
-        self.inConversation = True
+        ConversationHandlerClass.timerRestarted = True
+        ConversationHandlerClass.timerCallback()
+        ConversationHandlerClass.inConversation = True
 
-    def endConversation(self):
-        print("conversation ended")
-        self.inConversation = False
-        self.classroomInConversation = ""
+    @staticmethod
+    def endConversation():
+        print("conversation ended room in conversation was {}".format(
+            ConversationHandlerClass.classroomInConversation))
+        ConversationHandlerClass.inConversation = False
+        ConversationHandlerClass.classroomInConversation = ""

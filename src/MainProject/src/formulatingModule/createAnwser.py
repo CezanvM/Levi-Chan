@@ -1,5 +1,13 @@
 #author: Cézan von Meijenfeldt
+from formulatingModule.ClassroomLocation import ClassroomLocationClass
+from formulatingModule.ClassroomOccupied import ClassroomOccupiedClass
+
+
 class CreateAnwserClass:
+
+    classroomLocationClass = ClassroomLocationClass()
+    classroomOccupiedClass = ClassroomOccupiedClass()
+
     def createAnwser(self, sentence, intention, certenty):
         print("Creating anwser")
         if certenty > 0.75:
@@ -36,7 +44,15 @@ class CreateAnwserClass:
         return "Goodbye!"
 
     def handleClassroomLocation(self, sentence):
-        return "you asked a question about a classroom location"
+        classroom = self.classroomLocationClass.getRoute(sentence)
+
+        #format classroom name from la120 to L A 120 for tts
+
+        return "you asked a question about the location of {} ".format(
+            classroom)
 
     def handleClassroomOccupied(self, sentence):
-        return "you asked a question about classroom availibilty"
+        classroom = self.classroomOccupiedClass.getAvailibilty(sentence)
+
+        return "you asked a question about the availibilty of {}".format(
+            classroom)
