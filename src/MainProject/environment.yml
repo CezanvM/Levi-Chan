@@ -1,6 +1,7 @@
 name: MainProject
 channels:
   - defaults
+  - rpi
 dependencies:
   - astroid=2.0.4=py35_0
   - blas=1.0=mkl
