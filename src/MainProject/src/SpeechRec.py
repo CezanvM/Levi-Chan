@@ -58,8 +58,10 @@ class SpeechRecClass:
         self.waitingOnAPI = True
         #sending audio to API
         # TODO Check if working with bad english
-        sentence = self.r.recognize_wit(sound, self.APIKey)
-        #sentence =  r.recognize_google(sound) #used for basic audio testing, conversion testing done with WIT.ai
+        #sentence = self.r.recognize_wit(sound, self.APIKey)
+        sentence = self.r.recognize_google(
+            sound
+        )  #used for basic audio testing, conversion testing done with WIT.ai
         if sentence != "":
             self.APICallback(sentence)
             ConversationHandlerClass.conversationInput()

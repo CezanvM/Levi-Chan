@@ -7,7 +7,9 @@ class ConversationHandlerClass:
     inConversation = False
     timerRestarted = False
 
-    classroomInConversation = "kek"
+    classroomInConversation = None
+    questionFinished = True
+    intentions = []
 
     @staticmethod
     def conversationHandlerInit():
@@ -36,6 +38,23 @@ class ConversationHandlerClass:
         return ConversationHandlerClass.classroomInConversation
 
     @staticmethod
+    def setQuestionFinished(isFinished):
+        ConversationHandlerClass.questionFinished = isFinished
+
+    @staticmethod
+    def getLastIntention():
+        intentionList = ConversationHandlerClass.intentions
+        return intentionList[len(intentionList) - 1]
+
+    @staticmethod
+    def getQuestionFinished():
+        return ConversationHandlerClass.questionFinished
+
+    @staticmethod
+    def addQuestionIntention(Intention):
+        ConversationHandlerClass.intentions.append(Intention)
+
+    @staticmethod
     def conversationInput():
         if ConversationHandlerClass.inConversation == False:
             print("Conversation started")
@@ -46,7 +65,8 @@ class ConversationHandlerClass:
 
     @staticmethod
     def endConversation():
-        print("conversation ended room in conversation was {}".format(
-            ConversationHandlerClass.classroomInConversation))
+        print("conversation ended, the classroom in the conversation was {}".
+              format(ConversationHandlerClass.classroomInConversation))
         ConversationHandlerClass.inConversation = False
-        ConversationHandlerClass.classroomInConversation = ""
+        ConversationHandlerClass.classroomInConversation = None
+        ConversationHandlerClass.intentions.clear()

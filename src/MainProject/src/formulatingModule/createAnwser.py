@@ -7,6 +7,7 @@ class CreateAnwserClass:
 
     classroomLocationClass = ClassroomLocationClass()
     classroomOccupiedClass = ClassroomOccupiedClass()
+    questionFinished = True
 
     def createAnwser(self, sentence, intention, certenty):
         print("Creating anwser")
@@ -35,24 +36,40 @@ class CreateAnwserClass:
 
     def handleGreeting(self, sentence):
         # good morning, good afternoon depending on time
-        return "Hello there, what can i do for you?"
+        questionFinished = True
+        return questionFinished, "Hello there, what can i do for you?"
 
     def handleGrateful(self, sentence):
-        return "You're welcome"
+        questionFinished = True
+        return questionFinished, "You're welcome"
 
     def handleGoodbye(self, sentence):
-        return "Goodbye!"
+        questionFinished = True
+        return questionFinished, "Goodbye!"
 
     def handleClassroomLocation(self, sentence):
-        classroom = self.classroomLocationClass.getRoute(sentence)
+        classroomFound, classroom = self.classroomLocationClass.getRoute(
+            sentence)
 
         #format classroom name from la120 to L A 120 for tts
-
-        return "you asked a question about the location of {} ".format(
-            classroom)
+        if classroomFound:
+            questionFinished = True
+            return questionFinished, "you asked a question about the location of {} ".format(
+                classroom)
+        else:
+            questionFinished = False
+            return questionFinished, "Sorry could you repeat the classroom you are looking for."
+            #todo add classroom extractor to low pecentage sentences
 
     def handleClassroomOccupied(self, sentence):
-        classroom = self.classroomOccupiedClass.getAvailibilty(sentence)
+        classroomFound, classroom = self.classroomOccupiedClass.getAvailibilty(
+            sentence)
 
-        return "you asked a question about the availibilty of {}".format(
-            classroom)
+        if classroomFound:
+            questionFinished = True
+            return questionFinished, "you asked a question about the availibilty of {}".format(
+                classroom)
+        else:
+            questionFinished = False
+            return questionFinished, "Sorry could you repeat the classroom you are looking for."
+            #todo add classroom extractor to low pecentage sentences

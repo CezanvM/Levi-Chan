@@ -16,7 +16,7 @@ class ClassroomExtractorClass:
                 validClass = True
                 break
             if w == 'ld':
-                room = self.handleRoomLD()
+                room = self.handleRoomLD(words[words.index(w) + 1])
                 validClass = True
                 break
 
@@ -24,16 +24,11 @@ class ClassroomExtractorClass:
         if valid:
             room = rooms[0]
             validClass = True
-
-        #@todo search better for classrooms like la120 instead of la 120
-        #@todo if not found ask conversation handler about the classroom
-
-        if validClass:
             ConversationHandlerClass.setClassroom(room)
 
         else:
             room = ConversationHandlerClass.getClassroom()
-            if room != "":
+            if room != None:
                 validClass = True
 
         return validClass, room
