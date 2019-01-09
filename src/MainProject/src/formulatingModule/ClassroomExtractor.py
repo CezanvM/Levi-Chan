@@ -59,6 +59,12 @@ class ClassroomExtractorClass:
                 if valid:
                     potentialRooms.append("ld {}".format(value))
                     deepSearchValid = True
+            elif w == "l" :
+                if "a" in words[words.index(w) + 1] :
+                    valid, value = self.extractNumber(words[words.index(w) + 1])
+                    if valid:
+                        potentialRooms.append("la {}".format(value))
+                        deepSearchValid = True
 
         return deepSearchValid, potentialRooms
 
