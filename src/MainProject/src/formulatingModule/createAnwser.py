@@ -55,8 +55,7 @@ class CreateAnwserClass:
         #format classroom name from la120 to L A 120 for tts
         if classroomFound:
             questionFinished = True
-            return questionFinished, "you asked a question about the location of {} ".format(
-                classroom)
+            return questionFinished, classroom
         else:
             questionFinished = False
             return questionFinished, "Sorry could you repeat the classroom you are looking for."
