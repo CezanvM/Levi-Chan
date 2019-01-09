@@ -1,4 +1,5 @@
 #author: Cézan von Meijenfeldt
+
 from InterpreterModule.WordConverter import WordConverterClass
 from InterpreterModule.NeuralNet import NeuralNetClass
 from InterpreterModule.ConversationHandler import ConversationHandlerClass
@@ -40,7 +41,8 @@ class QuestionInterpreterClass:
         if certenty > 0.75:
             ConversationHandlerClass.addQuestionIntention(intention)
         else:
-            intention, certenty = self.handleNotFinishedQuestion(sentence)
+            intention, certenty = self.handleNotFinishedQuestion(
+                sentence, intention, certenty)
 
         print("----------------------------------------------")
         print("Sentence is: {}".format(sentence))
@@ -59,7 +61,7 @@ class QuestionInterpreterClass:
         print("----------------------------------------------\n\n\n")
         # to awnser formulator
 
-    def handleNotFinishedQuestion(self, sentence):
+    def handleNotFinishedQuestion(self, sentence, intention, certenty):
         #todo search if a earlyer question !finished
         if sentence != None:
             if ConversationHandlerClass.getQuestionFinished() == False:
@@ -69,3 +71,4 @@ class QuestionInterpreterClass:
                     lastIntention = ConversationHandlerClass.getLastIntention()
                     newCertenty = 1
                     return lastIntention, newCertenty
+        return intention, certenty

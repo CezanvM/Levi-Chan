@@ -20,7 +20,8 @@ class CreateAnwserClass:
             return self.unsureResponse()
 
     def unsureResponse(self):
-        return "Sorry could you repeat your last question"
+        questionFinished = True
+        return questionFinished, "Sorry could you repeat your last question"
 
     def handleSureResponse(self, intention, sentence):
         if intention == "greeting":

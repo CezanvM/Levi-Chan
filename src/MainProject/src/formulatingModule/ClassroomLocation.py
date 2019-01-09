@@ -25,18 +25,4 @@ class ClassroomLocationClass:
             #handle classroom not found ask for classroom
             return classroomFound, "classroom not found"
 
-    def startupClassroomLocation(self, configFile):
-            
-
-
-
-class Building:
-   floors = []
-   sentence = ""
-
-class Floor:
-    rooms = []
-    sentence = ""
-
-class Classroom:
-    sentence = ""
+    #def startupClassroomLocation(self, configFile):
