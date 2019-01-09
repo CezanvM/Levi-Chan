@@ -9,12 +9,12 @@ class ClassroomLocationClass:
     classroomExtractorClass = ClassroomExtractorClass()
 
     def getRoute(self, sentence):
-       
+       classroomFound = False
         valid, classroom = self.classroomExtractorClass.getClassRoom(sentence)
+        
         if valid:  # small convertion for the tts
             print("Getting route to classroom")
             if "la" in classroom:
-                foundRoom = False
                 speechClassroom = classroom.replace("la", "L A ", 1)
                 floor = int(speechClassroom[4:5])
                 room = speechClassroom[5:]
@@ -24,20 +24,18 @@ class ClassroomLocationClass:
                 for i in LAdata['Floors'][floor]['ClassRooms']:
                     if i['Room'] == room :
                         Outputsentence = Outputsentence + i['Location']
-                        foundRoom = True
+                        classroomFound = True
                         break
 
-                if foundRoom == False:
-                    Outputsentence = 'Could not find room ' + speechClassroom + '.'
-
-                return Outputsentence
+                return classroomFound, Outputsentence
             elif "ld" in classroom:
+                classroomFound = False
                 speechClassroom = classroom.replace("ld", "L D ", 1)
-                Outputsentence = 'You asked for a route to room ' + speechClassroom + '. However there currently is no route finder available to that location'
-            return Outputsentence
+            return FalclassroomFoundse, Outputsentence
 
         else:
             print("classroom not found")
+            classroomFound = False
             #handle classroom not found ask for classroom
             return classroomFound, "classroom not found"
 
