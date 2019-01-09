@@ -2,7 +2,6 @@
 from InterpreterModule.QuestionInterpreter import QuestionInterpreterClass
 import speech_recognition as sr
 import pandas as pd
-from playsound import playsound
 from InterpreterModule.ConversationHandler import ConversationHandlerClass
 
 #import datetime
