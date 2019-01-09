@@ -1,0 +1,67 @@
+
+{"Buildings": [
+	{"BuildingName": "LA", "Location": "In this building.", "FloorsLA": [
+		{"Floor": "0", "Location": "Stay on this floor.", "ClassRoomsLA0": [
+			{"Room": "08", "Location": "The classroom is located the glass room that is near the stairs"},
+			{"Room": "021", "Location": "Head through the hallway behind the service desk into the open area. The classromm is located on the left side"},
+			{"Room": "029", "Location": "Head through the hallway behind the service desk into the open area, exit this area through the door on the left side of the room. Walk past the workshop to the stairs. The room is located at the top of the stairs behind the double doors."}
+		]},
+		
+		{"Floor": "1", "Location": "Take the stairs that are located in the hallway past the service desk. ", "ClassRoomsLA1": [
+			{"Room": "01a", "Location": "Exit the stairs at the first landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. The room is the first on the left side as soon as you enter."},
+			{"Room": "01b", "Location": "Exit the stairs at the first landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. The room is the second on the left side as soon as you enter."},
+			{"Room": "01c", "Location": "Exit the stairs at the first landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. The room is directly acros from the entrance."},
+			{"Room": "01d", "Location": "Exit the stairs at the first landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. The room is slightly to the right and acros from the entrance."},
+			{"Room": "01e", "Location": "Exit the stairs at the first landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. Follow the path to the right. The room is on the left side of the path."},
+			{"Room": "01f", "Location":  "Exit the stairs at the first landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. Follow the path to the right. The room is on the left side of the path."},
+			{"Room": "21", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The classroom is located immediately on the left of the hallway"},
+			{"Room": "23", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The classroom is the second room on the left side of the hallway"},
+			{"Room": "24", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The classroom is second door on the right side."},
+			{"Room": "25", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The classroom is the third room on the left side of the hallway"},
+			{"Room": "26", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The room is the glass room on the right side of the hallway. The entrance is on the other side. Use the second door."},
+			{"Room": "27", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The classroom is the fifth room on the left side of the hallway"},
+			{"Room": "28", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. The room is the glass room on the right side of the hallway. The entrance is on the other side. Use the first door."},
+			{"Room": "34", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. To get to the classroom walk through the hallway until there is and hallway on the right side. The room is in the left corner of this hallway."},
+			{"Room": "36", "Location": "Exit the stairs at the second landing. And head throug the hallway on the right. To get to the classroom walk through the hallway until there is and hallway on the right side. The room is straight ahead in this hallway."}
+		]},
+		
+		{"Floor": "2", "Location": "Take the stairs that are located in the hallway past the service desk.  ", "ClassRoomsLA2": [
+			{"Room": "01a", "Location": "Exit the stairs at the third landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. The room is the first on the left side as soon as you enter."},
+			{"Room": "01b", "Location": "Exit the stairs at the third landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. The room is straight ahead of the entrance."},
+			{"Room": "01c", "Location": "Exit the stairs at the third landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. Follow the path to the right. The room is on the left side of the path."},
+			{"Room": "01d", "Location": "Exit the stairs at the third landing, and head right. This room is inside the teachers lounge that is located on the left side of the hallway. Follow the path to the right. The room is on the left side of the path."},
+			{"Room": "21", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The entrance to the classroom is located immediately on the left of the hallway, tucked away in the corner"},
+			{"Room": "22", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The classroom is first door on the right side."},
+			{"Room": "23", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The classroom is the second room on the left side of the hallway"},
+			{"Room": "24", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The classroom is second door on the right side."},
+			{"Room": "25", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The entrance is the third door on the left side"},
+			{"Room": "26", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The classroom is third door on the right side."},
+			{"Room": "27", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The entrance is the fourth door on the left side"},
+			{"Room": "28", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. This is the open area on the right side of the hallway"},
+			{"Room": "29", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The entrance is the fifth door on the left side"},
+			{"Room": "34", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. This is the open area on the right side of the hallway"},
+			{"Room": "35", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. This classroom is located at the end of the hallway"},
+			{"Room": "36", "Location": "Exit the stairs at the fourth landing. And head throug the hallway on the right. The entrance to the classroom is located on the leftside of the open area"}
+		]},
+		
+		{"Floor": "3", "Location": "Take the stairs that are located in the hallway past the service desk. Exit the stairs at the fifth landing, and head to the right", "ClassRoomsLA3": [
+			{"Room": "01", "Location": "This classroom is the first room on the left side"},
+			{"Room": "03", "Location": "This classroom is the second room on the left side"},
+			{"Room": "05", "Location": "This classroom is the third room on the left side"}
+		]},
+		
+		{"Floor": "4", "Location": "Take the stairs that are located in the hallway past the service desk. Exit the stairs at the seventh landing.", "ClassRoomsLA4": [
+			{"Room": "02", "Location": "Head into the hallway on the right side. This classroom is the second room on the left side"},
+			{"Room": "03", "Location": "Head into the hallway on the right side. This classroom is the first room on the right side"},
+			{"Room": "21", "Location": "Head into the hallway on the left side. The classroom is the first on the left side."},
+			{"Room": "23", "Location": "Head into the hallway on the left side. The classroom is the second on the left side."}
+		]},
+		
+		{"Floor": "5", "Location": "Take the stairs that are located in the hallway past the service desk. Exit the stairs at the top landing.", "ClassRoomsLA5": [
+			{"Room": "01", "Location": "Head into the hallway on the right side. This classroom is the first room on the left side"},
+			{"Room": "02", "Location": "Head into the hallway on the right side. This classroom is the first room on the right side"},
+			{"Room": "23", "Location": "Head into the hallway on the left side. The classroom is the second door on the left side."}
+		]}
+	]},
+	{"BuildingName": "LD", "Location": "Out this building and two buildings over.", "FloorsLD": "However no location guidance is availeble for that location"}
+]}
