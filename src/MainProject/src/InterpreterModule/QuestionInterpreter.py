@@ -15,10 +15,10 @@ class QuestionInterpreterClass:
     speechSyntchClass = SpeechSynthCLass()
     classroomExtractorClass = ClassroomExtractorClass()
 
-    wordTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\558613.wordTokenizer"
-    classTokenizerPath = "MainProject\\Data\\NeuralNetSaves\\558613.classTokenizer"
-    modelJsonPath = "MainProject\\Data\\NeuralNetSaves\\558613.modelJSON"
-    weightsPath = "MainProject\\Data\\NeuralNetSaves\\558613.weights"
+    wordTokenizerPath = "../Data/NeuralNetSaves/558613.wordTokenizer"
+    classTokenizerPath = "../Data/NeuralNetSaves/558613.classTokenizer"
+    modelJsonPath = "../Data/NeuralNetSaves/558613.modelJSON"
+    weightsPath = "../Data/NeuralNetSaves/558613.weights"
 
     def InterpreterStartup(self):
         print("starting Interpreter....")

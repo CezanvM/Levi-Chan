@@ -58,6 +58,8 @@ class ConversationHandlerClass:
     def conversationInput():
         if ConversationHandlerClass.inConversation == False:
             print("Conversation started")
+        else:
+            print("already in conversation")
         t.cancel()
         ConversationHandlerClass.timerRestarted = True
         ConversationHandlerClass.timerCallback()

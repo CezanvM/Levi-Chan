@@ -32,7 +32,7 @@ class ClassroomLocationClass:
         floor = int(speechClassroom[4:5])
         room = speechClassroom[5:]
         LAdata = json.loads(
-            open('MainProject\\Data\\BuildingConfig\\LAConfigFile.json')
+            open('./Data/BuildingConfig/LAConfigFile.json')
             .read())
         Outputsentence = 'You asked for a route to room ' + speechClassroom + '. '
         Outputsentence = Outputsentence + LAdata['Floors'][floor]['Location']
@@ -45,7 +45,7 @@ class ClassroomLocationClass:
     def getPath2(self, classroom):
         classroomFound = False
         LAdata = json.loads(
-            open('MainProject\\Data\\BuildingConfig\\LAConfigFile.json')
+            open('../Data/BuildingConfig/LAConfigFile.json')
             .read())
         classroomNumber = classroom.replace("la", "", 1)
         speechClassroom = classroom.replace("la", "L A ", 1)

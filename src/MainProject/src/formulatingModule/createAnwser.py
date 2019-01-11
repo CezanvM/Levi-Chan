@@ -67,7 +67,7 @@ class CreateAnwserClass:
 
         if classroomFound:
             questionFinished = True
-            return questionFinished, "you asked a question about the availibilty of {}".format(
+            return questionFinished, "you asked a question about the availibilty of {}, unfortunatly I do not have that information yet!".format(
                 classroom)
         else:
             questionFinished = False

@@ -53,19 +53,25 @@ class SpeechRecClass:
 
     def sendAudioToAPI(self, sound):
         #self.timeBeforeCall = datetime.datetime.now
-
+        print("sening your voice to google")
         self.waitingOnAPI = True
         #sending audio to API
         # TODO Check if working with bad english
         #sentence = self.r.recognize_wit(sound, self.APIKey)
-        sentence = self.r.recognize_google(
-            sound
-        )  #used for basic audio testing, conversion testing done with WIT.ai
+        sentence = ""
+        try:
+            sentence = self.r.recognize_google(
+                sound
+            )  #used for basic audio testing, conversion testing done with WIT.ai
+        except:
+            print("google failed")
+        self.waitingOnAPI = False
         if sentence != "":
             self.APICallback(sentence)
             ConversationHandlerClass.conversationInput()
         else:
             print("Nothing heard!")
+            self.waitingOnApi = False
 
     def APICallback(self, sentence):
         self.questionInterpreter.InterpretQuestion(sentence)
