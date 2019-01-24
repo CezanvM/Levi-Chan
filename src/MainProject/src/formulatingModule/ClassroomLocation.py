@@ -44,6 +44,7 @@ class ClassroomLocationClass:
 
     def getPath2(self, classroom):
         classroomFound = False
+        Outputsentence = ""
         LAdata = json.loads(
             open('MainProject\\Data\\BuildingConfig\\LAConfigFile.json')
             .read())
